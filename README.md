@@ -58,7 +58,7 @@ Faça uma cópia do arquivo env.example e o renomeie para .env <br>
 Em seguida altere as variáveis de acesso ao banco de dados com suas credênciais
 
 ```bash
-APP_NAME=Voch Tech
+APP_NAME=VochTech
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
