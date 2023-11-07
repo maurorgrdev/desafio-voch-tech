@@ -75,12 +75,6 @@ $ composer install
 $ php artisan key:generate
 ```
 
-Ainda no terminal execute:
-```bash
-$ php artisan optimize:clear
-$ php artisan optimize
-```
-
 Para gerar as tabelas no banco de dados e povoalo, execute os seguintes comandos:
 ```bash
 $ php artisan migrate
