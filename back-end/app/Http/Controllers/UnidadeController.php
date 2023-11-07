@@ -91,14 +91,4 @@ class UnidadeController extends BaseController
             return $this->sendError($e->getMessage(), null, 400); 
         }
     }
-
-    public function totalColaboladoresPorUnidade(){
-        try {
-            $result = $this->unidadeRepository->total_colaboradores_por_unidade();
-
-            return $this->sendResponse($result);
-        } catch (Exception $e) {
-            return $this->sendError($e->getMessage(), null, 400);
-        }
-    }
 }

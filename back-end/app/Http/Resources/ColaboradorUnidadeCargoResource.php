@@ -2,9 +2,10 @@
 
 namespace App\Http\Resources;
 
+use App\Repositories\UnidadeRepository;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ColaboradorResource extends JsonResource
+class ColaboradorUnidadeCargoResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,12 +15,14 @@ class ColaboradorResource extends JsonResource
      */
     public function toArray($request)
     {
+        
         return [
             'id'         => $this->id,
             'nome'       => $this->nome,
             'email'      => $this->email,
             'cpf'        => $this->cpf,
-            'unidade_id' => $this->unidade_id,
+            'unidade'    => $this->unidade,
+            'cargo'      => $this->cargo,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Relatorios;
 
+use App\Http\Controllers\BaseController;
 use App\Repositories\ColaboradorCargoRepository;
 use Exception;
 
-class RelatorioDesempenhoController extends BaseController{
+class DesempenhoColaboradorController extends BaseController{
     protected $colaboradorCargoRepository;
 
     public function __construct(ColaboradorCargoRepository $colaboradorCargoRepository) {
@@ -13,7 +14,7 @@ class RelatorioDesempenhoController extends BaseController{
     }
 
 
-    public function relarioColaboradoresMelhoresDesempenhosOrdemDecrescente(){
+    public function colaboradoresMelhoresDesempenhosOrdemDecrescente(){
         try {
             $relatorio = $this->colaboradorCargoRepository->relario_colaboradores_melhores_desempenhos_ordem_decrescente();
             

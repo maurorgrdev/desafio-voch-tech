@@ -20,7 +20,19 @@ class Colaborador extends Model
 
     public $timestamps = true;
 
-    public function unidade(){
-        return $this->hasOne(Unidade::class, 'unidade_id');
+    /**
+     * Get the phone associated with the user.
+     */
+    public function unidade()
+    {
+        return $this->belongsTo(Unidade::class);
+    }
+
+    /**
+     * The roles that belong to the user.
+     */
+    public function cargo()
+    {
+        return $this->belongsToMany(Cargo::class, 'colaborador_cargo', 'colaborador_id', 'cargo_id');
     }
 }

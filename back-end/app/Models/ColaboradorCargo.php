@@ -18,4 +18,12 @@ class ColaboradorCargo extends Model
     ];
 
     public $timestamps = true;
+
+    public function cargo(){
+        return $this->belongsTo(Cargo::class);
+    }
+
+    public function colaborador(){
+        return $this->belongsTo(Colaborador::class);
+    }
 }

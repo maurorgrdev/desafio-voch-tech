@@ -28,7 +28,7 @@ class ColaboradorCargoController extends BaseController
         try {
             $results = $this->colaboradorCargoRepository->all();
 
-            return $this->sendResponse($results);
+            return $this->sendResponse(ColaboradorCargoResource::collection($results));
         } catch (Exception $e) {
             return $this->sendError($e->getMessage(), null, 400); 
         }

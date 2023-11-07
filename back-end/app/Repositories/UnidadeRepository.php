@@ -18,6 +18,7 @@ class UnidadeRepository extends AbstractRepository{
                             ->selectRaw('COUNT(*)')
                             ->whereRaw('`unidades`.`id` = `colaboradores`.`unidade_id`');
                 }, 'total_colaboradores')
+                ->orderBy('total_colaboradores', 'desc')
                 ->get();
 
         return $teste;

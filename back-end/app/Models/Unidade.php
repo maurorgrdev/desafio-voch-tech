@@ -18,4 +18,10 @@ class Unidade extends Model
     ];
 
     public $timestamps = true;
+
+    public function colaboradores()
+    { 
+  
+        return $this->belongsToMany(Colaborador::class);
+    }
 }

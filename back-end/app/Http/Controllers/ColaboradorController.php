@@ -25,11 +25,11 @@ class ColaboradorController extends BaseController
     public function index()
     {
         try {
-            $colaborador = $this->colaboradorRepository->all();
+            $colaboradores = $this->colaboradorRepository->all();
 
-            return $this->sendResponse(ColaboradorResource::collection($colaborador));
+            return $this->sendResponse(ColaboradorResource::collection($colaboradores));
         } catch (Exception $e) {
-            return $this->sendError(null, $e->getMessage(), 400); 
+            return $this->sendError( $e->getMessage(), null, 400); 
         }
     }
 

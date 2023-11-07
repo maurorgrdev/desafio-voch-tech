@@ -16,4 +16,12 @@ class Cargo extends Model
     ];
 
     public $timestamps = true;
+
+    /**
+     * The roles that belong to the user.
+     */
+    public function colaboradores()
+    {
+        return $this->belongsToMany(Colaborador::class, 'colaborador_cargo', 'cargo_id', 'colaborador_id');
+    }
 }
