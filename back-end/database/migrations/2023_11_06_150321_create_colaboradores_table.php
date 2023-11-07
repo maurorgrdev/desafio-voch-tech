@@ -19,7 +19,7 @@ class CreateColaboradoresTable extends Migration
             $table->string('cpf', 14);
             $table->string('email', 100);
             $table->unsignedBigInteger('unidade_id')->nullable();
-            $table->foreign('unidade_id')->references('id')->on('unidades');
+            $table->foreign('unidade_id')->references('id')->on('unidades')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
